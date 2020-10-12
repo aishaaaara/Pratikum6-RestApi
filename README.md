@@ -1,1 +1,1 @@
-# Pratikum6-RestApi
+# Praktikum6-RestApi
