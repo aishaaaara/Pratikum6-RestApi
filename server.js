@@ -108,22 +108,16 @@ app.put("/:id", (req,res) => {
       })
     })
 //end point mengubah data siswa
-app.delete("/:id", (req,res) => {
+app.delete("siswa/:id", (req,res) => {
 
     let data = [
-
-        {
-            nis: req.body.nis,
-            nama_siswa: req.body.nama_siswa,
-            kelas: req.body.kelas,
-        },
 
         {
             id_siswa: req.params.id
         }
     ]
     
-    let sql = "update siswa set ? where ?"
+    let sql = "delete from siswa  where ?"
     db.query(sql, data, (error, result) => {
         let response = null
         if (error) {
